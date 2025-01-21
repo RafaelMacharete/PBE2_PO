@@ -1,0 +1,23 @@
+Merge Sort is a complex sort algorithm, but also is efficient
+
+To execute it: 
+1° Get an array
+2° Divide it until you can not do it anymore
+3° Conquer it:
+    3° a. Sort each subarray
+    3° b. Merge each sorted subarray
+
+exemple:
+6,1,4,8,9,3,5,2
+
+6,1,4,8   9,3,5,2
+
+6,1   4,8   9,3   5,2
+
+6  1  4  8  9  3  5  2
+
+1,6  4,8  9,3  2,5
+
+1,4,6,8   2,3,5,9
+
+1,2,3,4,5,6,8,9
