@@ -1,0 +1,13 @@
+Insertion Sort, is a sorting algorithm, that works iterating by an array
+where you get a reference value (for each iterate, u jump 1 index)to compare with the past values, and switch them
+
+example:
+3,2,12,9,7,0
+
+2,3,12,9,7,0
+
+2,3,9,12,7,0
+
+2,3,7,9,12,0
+
+0,2,3,7,9,12

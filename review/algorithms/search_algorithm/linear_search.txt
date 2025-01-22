@@ -1,0 +1,15 @@
+linear search is a search algorithm that works by taking a reference value. 
+then, you compare each element in an array
+if the reference value equals an element in the array, you have found it. Otherwise, it is not present.
+
+example:
+
+true condition:
+    reference value: 1
+    array: [2, 6, 1, 7, 4, 11]
+    The algorithm finds 1 in the array.
+    
+false condition:
+    Reference value: 0
+    Array: [2, 6, 1, 7, 4, 11]
+    The algorithm does not find 0 in the array.

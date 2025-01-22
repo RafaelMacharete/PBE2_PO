@@ -1,0 +1,24 @@
+Complexidade de algoritimos é definido por: tempo e espaço
+O algoritimo é não-linear, ou seja, até mesmo uma pequena diferença no ínicio 
+começo, pode mudar totalmente o resultado.
+
+'algoritimo é um conjunto finito de instruções simples e precisar,
+que são descritas com um número finito de símbolos'
+
+A complexidade é usada para medir a velocidade de um algoritimo, baseado no número de 'passos'.
+
+em um algoritimo X:
+ao percorrer um array de 10 posições, somando o índice das posições a 200
+a complexidade seria de 10xt, sendo que t representa o tempo necessário para 
+atualizar cada elemento do array com a operação de soma.
+
+Algoritimo              Melhor caso         Caso Medio          Pior caso           Espaço Adicional
+Merge Sort              O(n log n)          O(n log n)          O(n log n)               O(n)
+Insertion Sort             O(n)                O(n²)              O(n²)                  O(1)
+Bubble Sort                O(n)                O(n²)              O(n²)                  O(1)
+Busca Linear               O(1)                O(n)               O(n)                   O(1)
+Busca Binaria              O(1)              O(log n)           O(log n)                 O(1)
+
+O(n): O tempo aumenta linearmente com o tamanho da entrada.
+O(log n): O tempo aumenta logaritmicamente, muito mais devagar.
+O(1): O tempo é constante, não depende do tamanho da entrada.
