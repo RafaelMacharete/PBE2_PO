@@ -1,0 +1,18 @@
+Herança: Herdar (receber) características/funcionalidades da classe pai
+
+Por exemplo
+
+classe Cachorro
+caracteristicas: raça, cor
+
+funções: latir, farejar
+
+------
+
+classe CachorroPolicial (Cachorro)
+caracteristicas (Cachorro) = raça, cor
+
+funções (Cachorro) = latir, farejar
+
+Isso evita redundâncias no código
+Contribui para a modulação

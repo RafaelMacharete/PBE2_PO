@@ -1,0 +1,24 @@
+Polimorfismo: É o copia mas não faz igual, eu herdo as funções/caracteristicas, mas na execução
+eu faço de maneira diferente
+
+Por exemplo
+
+classe Cachorro
+caracteristicas: raça, cor
+
+funções: latir, farejar
+
+farejar:
+    o cachorro fareja algo
+
+
+------
+
+
+classe CachorroPolicial (Cachorro)
+caracteristicas (Cachorro) = raça, cor
+
+funções (Cachorro) = latir, farejar
+
+farejar:
+    o cachorro policial consegue farejar coisas ilícitas.
