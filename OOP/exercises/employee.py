@@ -6,4 +6,4 @@ class Employee():
 
     def calc_net_salary(self, tax_pct, benefits):
         self.net_salary = tax_pct * 100 * self.salary - benefits
-    
+#
