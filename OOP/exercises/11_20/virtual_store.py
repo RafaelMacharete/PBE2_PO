@@ -14,13 +14,19 @@ class VirtualStore():
         
         self.products_list.append(self.product_data)
 
-    def shop_cart(self, prod_choice, prod_amount):
-        self.total_value = self.products_list[prod_choice]
+    def shop_cart(self, prod_choice, prod_amount, discount = 0):
+        self.data_cart = self.product_data
+        self.total_value = self.products_list[prod_choice]['price'] * prod_amount - discount
+        
+        self.data_cart.pop('id')
+        self.data_cart.update({'amount': prod_amount, 'total value': self.total_value})
+
+        return self.data_cart
         
 
 virtual_store1 = VirtualStore('Redragon')
 
-virtual_store1.register_products('Teclado', 2)
-virtual_store1.register_products('Mouse', 1)
+virtual_store1.register_products('Teclado', 20)
+virtual_store1.register_products('Mouse', 10)
 
-virtual_store1.shop_cart(1,2)
+print(virtual_store1.shop_cart(1, 10, 10))
