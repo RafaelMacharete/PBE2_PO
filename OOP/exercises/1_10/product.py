@@ -10,7 +10,7 @@ class Product():
             return self.total_value
         return 'Stock is empty'
     
-product1 = Product('Biscoito', 5, 10)
+product1 = Product('Biscoito', 5, 0)
 
 total_value = product1.calc_total_value()
 

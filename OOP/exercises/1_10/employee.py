@@ -5,7 +5,7 @@ class Employee():
         self.emp_position = employee_position
 
     def calc_net_salary(self, tax_pct, benefits):
-        self.net_salary = self.salary - (self.salary * tax_pct / 100) + benefits
+        self.net_salary = self.salary - (self.salary * tax_pct / 100) - benefits
         return self.net_salary
 
     
