@@ -1,0 +1,13 @@
+EndPoint: https://dragonball-api.com/api/characters
+
+Parâmetros: https://dragonball-api.com/api/characters?race=Saiyan
+
+Response: https://web.dragonball-api.com/documentation#response
+Quando executa o 'post', retorna esse erro:
+	{
+	"message": "Unauthorized",
+	"statusCode": 401
+	}
+
+
+Token: não tem

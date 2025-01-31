@@ -15,6 +15,7 @@ class Patient():
         consultations = "\n".join(
             [f"Date: {consult['date']}, Doctor: {consult['doctor']}" for consult in self.consult_hist]
         )
+        print(self.consult_hist)
         return f"{self.name} patient attended the following consultations:\n{consultations}"
 
         
