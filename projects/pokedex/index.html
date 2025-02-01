@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Pokedéx</title>
 </head>
 
 <body>
-    <h1>Pokedéx</h1>
+    <h1 class="pokedex">Pokedéx</h1>
     <!-- <button id="button">Show Character</button> -->
 
     <div class="card">
+        <!-- Colorful Buttons -->
         <div class="buttons">
             <div class="blue_button"></div>
             <div class="top_buttons">
@@ -20,17 +22,42 @@
                 <div class="yellow_button"></div>
                 <div class="green_button"></div>
             </div>
+            <input type="text" id="input">
         </div>
+        <!-- End of Colorful Buttons -->
+
+        <!-- Main Info Part -->
         <div class="content">
+            <!-- Display Image -->
             <div class="display">
                 <img id="pokemon_image" alt="pokemon image">
             </div>
-            <h1 id="name"></h1>
-            <div class="buttons">
-                <button id="previous">Previous</button>
-                <button id="next">Next</button>
+            <!-- End Of Display Image -->
+
+            <!-- Pokemon info -->
+            <div class="pokemon_info">
+                <h1 id="name"></h1>
+                <h1 id="id">
+                    </h3>
             </div>
+            <!-- End Of Pokemon Info -->
+             
+            <div class="types">
+                <h1 id="type1">asd</h1>
+                <h1 id="type2">asd</h1>
+            </div>
+            <!-- Next and Previous Buttons-->
+            <div class="buttons_pokemon">
+                <button id="previous">
+                    Previous
+                </button>
+                <button id="next">
+                    Next
+                </button>
+            </div>
+            <!-- End of Buttons -->
         </div>
+        <!-- End of Main Info part -->
     </div>
 
     <script src="index.js"></script>

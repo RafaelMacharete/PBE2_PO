@@ -1,29 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('pokedex_bg.jpg');
 }
 
-.card{
+.pokedex {
+    font-family: 'Pokemon Solid';
+    color: black;
+}
+
+.card {
     background-color: #dc0a2d;
     width: 450px;
     height: 625px;
 }
 
-.card > .buttons{
+.card>.buttons {
     display: flex;
     gap: 30px;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 0px 10px 20px;
     border-bottom: 5px solid darkred;
 }
 
-.card > .buttons > .blue_button{
+.card>.buttons>.blue_button {
     background-color: #196a9f;
     width: 70px;
     height: 70px;
@@ -31,7 +37,7 @@ body{
     border-radius: 100%;
 }
 
-.card > .buttons > .top_buttons > .red_button{
+.card>.buttons>.top_buttons>.red_button {
     background-color: red;
     width: 20px;
     height: 20px;
@@ -39,19 +45,20 @@ body{
     border-radius: 100%;
 }
 
-.card > .buttons > .top_buttons > .yellow_button{
+.card>.buttons>.top_buttons>.yellow_button {
     background-color: #fbf07a;
     width: 20px;
     height: 20px;
     border: 1.7px solid black;
     border-radius: 100%;
 }
-.card > .buttons > .top_buttons{
+
+.card>.buttons>.top_buttons {
     display: flex;
     gap: 6px;
 }
 
-.card > .buttons > .top_buttons > .green_button{
+.green_button {
     background-color: #326c3f;
     width: 20px;
     height: 20px;
@@ -67,8 +74,9 @@ body{
     gap: 20px;
 }
 
-.content > .display{
-    background-color: #242424;
+.display {
+    background-image: url('pokemon_bg.webp');
+    background-size: cover;
     height: 250px;
     width: 250px;
     border: 20px solid #dedede;
@@ -78,22 +86,76 @@ body{
     justify-content: center;
 }
 
-.display > #pokemon_image{
+#pokemon_image {
     height: 250px;
     width: 250px;
 }
 
-#previous{
-    background-color: #e60833;
+#previous {
+    background-color: #2e2e2e;
+    color: white;
     border: 2.5px solid black;
     width: 150px;
     height: 20px;
 }
 
-#next{
-    background-color: #0c5376;
+#next {
+    background-color: #2e2e2e;
     color: white;
     border: 2.5px solid black;
     width: 150px;
     height: 20px;
+}
+
+#previous,
+#next {
+    font-size: 16px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.buttons_pokemon {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.pokemon_info {
+    display: flex;
+    background-color: #dedede;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+#id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.types {
+    display: flex;
+    gap: 15px;
+}
+
+#type1,
+#type2 {
+    background-color: #2e2e2e;
+    height: 37px;
+    width: 150px;
+    text-align: center;
+    line-height: 37px;
+}
+
+#input{
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+
+}
+
+textarea:focus, #input:focus{
+    outline: none;
 }
