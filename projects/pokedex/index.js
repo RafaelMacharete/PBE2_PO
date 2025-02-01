@@ -4,6 +4,7 @@
 
 let currentIndex = 1
 const nextButton = document.querySelector('#next')
+const previousButton = document.querySelector('#previous')
 
 async function fetchPokemonData(id) {
     let requisition = await (fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`));
@@ -17,8 +18,17 @@ async function fetchPokemonData(id) {
 }
 
 nextButton.addEventListener('click', () => {
-    currentIndex++; 
+    currentIndex++;
     fetchPokemonData(currentIndex);
+});
+
+previousButton.addEventListener('click', () => {
+    if (currentIndex <= 1) {
+        alert('You are on the last pokemon')
+    } else {
+        currentIndex--;
+        fetchPokemonData(currentIndex);
+    }
 });
 
 fetchPokemonData(currentIndex);
