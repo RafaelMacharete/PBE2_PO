@@ -6,6 +6,10 @@ let currentIndex = 1
 const nextButton = document.querySelector('#next')
 const previousButton = document.querySelector('#previous')
 
+const male = document.querySelector('#male')
+const female = document.querySelector('#female')
+
+let gender = 'male';
 const input = document.querySelector('#input')
 
 const typeColors = {
@@ -40,7 +44,12 @@ async function fetchPokemonData(id) {
     h1_id.textContent = '#' + json.id;
 
     let pokemonImage = document.querySelector('#pokemon_image');
-    pokemonImage.src = json.sprites.front_default;
+
+    if (gender == 'male'){
+        pokemonImage.src = json.sprites.other.home.front_default;
+    }else{
+        pokemonImage.src = json.sprites.other.home.front_female;
+    }
 
     let typesContainer = document.querySelector('.types');
     typesContainer.innerHTML = '';
@@ -80,13 +89,26 @@ previousButton.addEventListener('click', () => {
 });
 
 input.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter'){
-        if (input.value <= 0){
+    if (event.key === 'Enter') {
+        if (input.value <= 0) {
             alert('You entered a value out of range')
         }
         currentIndex = input.value
         fetchPokemonData(input.value)
+        input.value = ''
     }
+})
+
+male.addEventListener('click', () => {
+    gender = 'male';
+    console.log(gender)
+
+})
+
+female.addEventListener('click', () => {
+    gender = 'female'
+    console.log(gender)
+
 })
 
 fetchPokemonData(currentIndex);

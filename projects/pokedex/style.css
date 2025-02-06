@@ -9,6 +9,8 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url('pokedex_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .pokedex {
