@@ -1,0 +1,25 @@
+FrameWork - é um facilitador, ele é tipo um monte de peças de lego já prontas
+e eu só preciso adaptar para o meu desenho (projeto)
+
+Vantagens de utilizar um framework:
+	Poupa o tempo;
+	Clean Code;
+	Seguro;
+	Facil manutenção.
+
+
+O que é Django?
+	é um framework web de alto nível para o desenvolvimenmto de 
+	aplicações web, escrito em Python;
+	Ele segue o principip DRY (Don't Repeat Yourself)
+
+
+Características do Django:
+	Administração automática: Interface de administração que facilita a gestão dos dados aplicação.
+
+	ORM (Object-Relational Mapping): Facilita a interação com o banco de dados, permiitnod que você trabalhe com objetos Python
+	ao invés de escrever SQL manualmente,
+
+	Segurança: Protege contra muitos ataques de segurança, como CSRF, SQL injection e CLickjacking.
+	
+	Escalabilidade e Desempenho: Pode lidar com grande quantidades de códigos e dados.

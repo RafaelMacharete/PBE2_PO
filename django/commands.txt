@@ -1,0 +1,26 @@
+python -m venv env
+
+Windows:
+	env\Scripts\activate
+Linux:
+	source env\bin\activate
+
+pip install django
+
+para ver se ele está instalado:
+	django-admin --version
+	5.1.6
+
+django-admin startproject 'nome do projeto'
+
+pra atualizar, gerenciar, é com o manage.py
+	
+python manage.py startapp 'nome do app'
+
+view é a tela inicial, é o que eu vejo
+
+
+
+python manage.py migrate visualiza e atualiza
+
+urls.py são os endpoints, as rotas

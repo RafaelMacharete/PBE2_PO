@@ -1,0 +1,17 @@
+MTV:
+
+Model: Analisa o banco de dados
+
+Template: É a interfaçe do aplicativo
+
+View: Nosso algorítimo e configurações do projeto
+
+Tudo é interligado
+
+
+No MTV, o template é views do MVC
+e o view é o Controller do MVC
+
+e o model é o model do MVC
+
+E o ORM é uma forma de gerenciar o banco de dados

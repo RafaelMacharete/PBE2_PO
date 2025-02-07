@@ -1,0 +1,12 @@
+MVC
+É um padrão de desenvolvimento
+MVC (model-view-controller)
+
+Model:
+ Resporesenta os dados e a lógica de negócios da aplicação, ele interage com o banco de dados
+
+Views: é a UI, intertace
+
+Controller: Lógica de controle, recebe o que o usuário fez na view, e analisa o que fazer,
+normalmente ele processa e manda pro model
+

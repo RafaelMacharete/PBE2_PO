@@ -46,9 +46,9 @@ async function fetchPokemonData(id) {
     let pokemonImage = document.querySelector('#pokemon_image');
 
     if (gender == 'male'){
-        pokemonImage.src = json.sprites.other.home.front_default;
+        pokemonImage.src = json.sprites.front_default;
     }else{
-        pokemonImage.src = json.sprites.other.home.front_female;
+        pokemonImage.src = json.sprites.front_female;
     }
 
     let typesContainer = document.querySelector('.types');
