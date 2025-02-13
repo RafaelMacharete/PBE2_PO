@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Blog</title>
+</head>
+
+<body>
+    <h1>Blog</h1>
+    <ul>
+        { % for post in posts % }
+        <li>
+            <h2> { { posts.title } } </h2>
+            <p> { { post.content|slice:":200" } }...</p>
+            <p><a href="#">Leia Mais</a></p>
+        </li>
+        { % endfor %}
+    </ul>
+</body>
+
+</html>
