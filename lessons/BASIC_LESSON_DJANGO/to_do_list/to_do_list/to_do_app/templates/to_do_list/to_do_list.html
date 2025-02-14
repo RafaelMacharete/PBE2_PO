@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<hmtl>
+    <head>
+        <title>Blog</title>
+
+    </head>
+
+    <body>
+        <h1>To Do List </h1>
+        <ul>
+            {% for task in tasks%}
+            <li>
+                <h2>{{task.task_name}}</h2>
+                <p>{{ task.task_description}}</p>
+                <p>Concluded: 
+                    {% if task.task_status == False %}
+                        No
+                        {% else %}
+                        Yes
+                    {% endif %}
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+

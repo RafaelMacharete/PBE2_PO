@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
     <title>Blog</title>
@@ -8,13 +8,13 @@
 <body>
     <h1>Blog</h1>
     <ul>
-        { % for post in posts % }
+        {% for post in posts %}
         <li>
-            <h2> { { posts.title } } </h2>
-            <p> { { post.content|slice:":200" } }...</p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content|slice:":200" }}...</p>
             <p><a href="#">Read More</a></p>
         </li>
-        { % endfor %}
+        {% endfor %}
     </ul>
 </body>
 
