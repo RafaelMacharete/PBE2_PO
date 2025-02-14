@@ -10,7 +10,11 @@
                 <li>
                     <h2>{{ product.product_name }}</h2>    
                     <img src="{{ product.product_image}}" alt="">
-                    <p>{{ product.product_price }}</p>
+                    {% if produto.imagem %}
+                    <img src="{{ product.product_image }}" alt="{{ product.product_name }}" class="produto-imagem">
+                    {% else %}
+                        <p>Sem imagem</p>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
