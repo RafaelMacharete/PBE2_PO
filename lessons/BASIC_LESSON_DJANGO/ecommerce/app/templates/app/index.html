@@ -13,6 +13,7 @@
     <ul class="products_content">
         {% for product in products %}
         <li>
+            <a href="{% url 'product' product.id %}">View</a>
             <h2>{{ product.product_name }}</h2>
             <p>{{ product.product_price|slice:":200" }}</p>
             <img src="{{product.product_image.url}}" alt="{{product.product_name}}" width='250px'>

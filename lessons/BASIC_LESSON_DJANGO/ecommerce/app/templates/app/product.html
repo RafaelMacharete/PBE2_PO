@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?v1.0">
+        
+        <title>{{product.product_name}}</title>
+    </head>
+    <body> 
+        <h1>Ecommerce</h1>
+        <ul class="products_content">
+        <li>
+            <h2>{{ product.product_name }}</h2>
+            <p>{{ product.product_price|slice:":200" }}</p>
+            <img src="{{product.product_image.url}}" alt="{{product.product_name}}" width='250px'>
+            <p>{{product.product_detail}}</p>
+        </li>
+    </ul>
+</body>
+</html>
