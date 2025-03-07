@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Searched</title>
+  </head>
+  <body>
+    {% if searched %}
+      <h2>Results for: "{{ searched }}"</h2>
+      {% if books %}
+        <ul>
+          {% for book in books %}
+            <li>{{ book.book_title }} - {{ book.book_author }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No books found.</p>
+      {% endif %}
+    {% endif %}
+  </body>
+</html>

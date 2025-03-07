@@ -8,7 +8,7 @@ class Book(models.Model):
     }
     book_title = models.CharField(max_length=30)
     book_author = models.CharField(max_length=50)    
-    book_publication_date = models.DateTimeField()
+    book_publication_date = models.CharField(max_length=10)
     book_category = models.CharField(max_length=3, choices=CATEGORY_CHOICES, default='Action')
 
     def __str__(self):

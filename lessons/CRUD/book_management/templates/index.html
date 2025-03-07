@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Create a new book</h1>
     <a href="{% url 'create_book' %}">Create new book</a>
 
+    <form action="{% url 'search_user' %}" method="post">
+      {% csrf_token %}
+      <input type="search" placeholder="Search" name="search" required/>
+      <button type="submit">Search</button>
+    </form>
+
     <ul>
-        {% for book in books %}
-        <li>{{ book.book_title}} - {{ book.book_author }}</li>
+      {% for book in books %}
+        <li>{{ book.book_title }} - {{ book.book_author }}</li>
         <li>{{ book.book_publication_date }} - {{ book.book_category }}</li>
-        {% endfor %}
+        <a href="{% url 'edit_book' book.pk %}">edit</a>
+        <br /><br /><br />
+      {% endfor %}
     </ul>
-</body>
+  </body>
 </html>
