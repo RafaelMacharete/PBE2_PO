@@ -20,6 +20,7 @@
         <li>{{ book.book_title }} - {{ book.book_author }}</li>
         <li>{{ book.book_publication_date }} - {{ book.book_category }}</li>
         <a href="{% url 'edit_book' book.pk %}">edit</a>
+        <a href="{% url 'delete_book' book.pk%}">delete</a>
         <br /><br /><br />
       {% endfor %}
     </ul>

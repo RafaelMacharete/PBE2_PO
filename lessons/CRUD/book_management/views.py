@@ -30,6 +30,13 @@ def edit_book(req, pk):
 
     return render(req, 'edit_book.html', {'form': form})
 
+def delete_book(req, pk):
+    book = get_object_or_404(Book, pk=pk)
+    if req.method == 'POST':
+        book.delete()
+        return redirect('index')
+    return render(req, 'book_confirm_delete.html', {'book': book})
+
 def search_user(req):
     if req.method == 'POST':
         searched = req.POST['search']
