@@ -31,7 +31,7 @@ def get_events_by_params(
     if date:
         all_events_filtered = all_events_filtered.filter(event_date__icontains = date)
     if ordering:
-        all_events_filtered = all_events_filtered.filter()
+        all_events_filtered = all_events_filtered.filter(event_date__gt = ordering)
     if qnt:
         all_events_filtered = all_events_filtered[0:qnt]
 
