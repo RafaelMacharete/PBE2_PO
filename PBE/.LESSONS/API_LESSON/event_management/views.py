@@ -79,14 +79,13 @@ def alter_get_event_state(req, pk):
         event_by_pk.delete()
         return Response('Event deleted', status=status.HTTP_204_NO_CONTENT)
 
-'''
-Filter events upcoming on 7 days
-'''
+# Filter events upcoming on 7 days
 @api_view(['GET'])
 def get_upcoming_events(req):
-    current_date = datetime.today().strftime('%Y-%m-%d')
-    current_date_object = datetime.strptime(current_date, '%Y-%m-%d')
-    seven_days_forward_of_current_date = (current_date_object + timedelta(days=7)).strftime('%Y-%m-%d')
+    # current_date = datetime.today().strftime('%Y-%m-%d')
+    # current_date_object = datetime.strptime(current_date, '%Y-%m-%d')
+    # seven_days_forward_of_current_date = (current_date_object + timedelta(days=7)).strftime('%Y-%m-%d')
+    
 
     upcoming_events = Event.objects.all().filter(event_date__gt = current_date).filter(event_date__lte = seven_days_forward_of_current_date)
     upcoming_events_serializer = EventSerializer(upcoming_events, many=True)
