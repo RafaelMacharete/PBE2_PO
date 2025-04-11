@@ -7,3 +7,4 @@ class CharacterSerializer(serializers.ModelSerializer):
         model = Character
         fields = '__all__'
         read_only_fields = ['id']
+
