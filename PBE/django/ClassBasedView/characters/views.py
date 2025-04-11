@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView
 from rest_framework.pagination import PageNumberPagination
-from rest_framework import serializers
+from rest_framework import serializers, status
+from rest_framework.permissions import AllowAny
 from .models import Character
-from .serializers import CharacterSerializer
+from .serializers import CharacterSerializer, LoginSerializer, AccountSerializer
 
 
 class CharacterPagination(PageNumberPagination):
@@ -41,3 +42,20 @@ class CharacterRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
             
             request._full_data = data
         return super().put(request, *args, **kwargs)
+    
+class LoginView(CreateAPIView):
+    serializer_class = LoginSerializer
+    permission_classes = [AllowAny]
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(date=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        user = serializer.validated_data['username']
+        user_serializer = AccountSerializer(user)
+
+        return Response({
+            'user': user_serializer.data,
+            'refresh': serializer.validated_data['refresh'],
+            'access': serializer.validated_data['access']
+        }, status=status.HTTP_200_OK)
