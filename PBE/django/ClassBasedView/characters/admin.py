@@ -8,7 +8,7 @@ class AccountAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
         ('New Fields', 
          {
-          'fields': ['username', 'is_active', 'profile_image'],   
+          'fields': ['profile_image'],   
          },
          ),
     )
@@ -16,7 +16,7 @@ class AccountAdmin(UserAdmin):
     add_fieldsets = UserAdmin.add_fieldsets + (
         ('New Fields', 
          {
-          'fields': ['username', 'is_active', 'profile_image'],   
+          'fields': ['profile_image'],   
          },
          ),
     )
