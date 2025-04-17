@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView
+from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.pagination import PageNumberPagination
 from rest_framework import serializers, status
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.response import Response
 from .models import Character
 from .serializers import CharacterSerializer, LoginSerializer, AccountSerializer
 
@@ -17,7 +19,8 @@ class CharacterListCreateApiView(ListCreateAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
     pagination_class = CharacterPagination
-    
+    permission_classes = [IsAuthenticated]
+
     def get_queryset(self):
         queryset = super().get_queryset()
         name = self.request.query_params.get('name')
@@ -34,6 +37,8 @@ class CharacterRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
     lookup_field = 'pk'
+    permission_classes = [IsAuthenticated]
+
     def put(self, request, *args, **kwargs):
         strength = request.data.get('strength')
         if int(strength) < 3:
@@ -42,13 +47,13 @@ class CharacterRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
             
             request._full_data = data
         return super().put(request, *args, **kwargs)
-    
+'''
 class LoginView(CreateAPIView):
     serializer_class = LoginSerializer
     permission_classes = [AllowAny]
 
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(date=request.data)
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
         user = serializer.validated_data['username']
@@ -59,3 +64,7 @@ class LoginView(CreateAPIView):
             'refresh': serializer.validated_data['refresh'],
             'access': serializer.validated_data['access']
         }, status=status.HTTP_200_OK)
+'''
+
+class LoginView(TokenObtainPairView):
+    serializer_class = LoginSerializer

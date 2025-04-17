@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Character, Account
 from django.contrib.auth import authenticate
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 
 class CharacterSerializer(serializers.ModelSerializer):
@@ -13,7 +14,7 @@ class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
         fields = '__all__'
-
+'''
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField(write_only=True)
@@ -42,4 +43,14 @@ class LoginSerializer(serializers.Serializer):
             return attrs
         else:
             message = 'Username or password invalids'
-            raise serializers.ValidationError(message, code='authorization')
+            raise serializers.ValidationError(message, code='authorization')'''
+
+class LoginSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+
+        data = super().validate(attrs)
+        data['user'] = { 
+            'username': self.user.username,
+            'image_url': self.user.profile_image.url if self.user.profile_image else None
+        }
+        return data
