@@ -1,0 +1,61 @@
+:root{
+    --blue-senai: #005A8D; /* Azul SENAI, confiabilidade e profissionalismo */
+    --dark-gray: #333333; /* Cinza escuro, para texto e contraste */
+    --light-gray: #B0BEC5; /* Cinza claro, para fundos e divisões */
+    --steel-gray: #607D8B; /* Cinza aço, um toque moderno e sóbrio */
+    --mint-green: #4CAF50; /* Verde menta, energia e frescor */
+
+    --light-blue: #81D4FA; /* Azul claro, suave e acolhedor */
+    --yellow-accent: #FFEB3B; /* Amarelo para destacar, sem ser excessivo */
+    --orange-accent: #FF7043; /* Laranja suave, para botões e interações */
+    --dark-blue: #003B5C; /* Azul escuro, para detalhes e cabeçalhos */
+    --white: #FFFFFF; /* Branco para equilíbrio e clareza */
+
+
+
+    
+    /* palette 2 */
+    --violet-english: #4A4063;
+    --thistle: #BFACC8;
+    --french-gray: #C8C6D7;
+    --eminence: #783F8E;
+    --indigo: #4F1271;
+    /* palette 3 
+    --onyx: #474448;
+    --raishin: #2D232E;
+    --bone: #E0DDCF;
+    --wenge: #534B52;
+    --isabelline: #F1F0EA;
+    /* palette 4 
+    --night: #171614;
+    --bistre: #3A2618;
+    --garnet: #754043;
+    --beaver: #9A8873;
+    --black-olive: #37423D;
+    /* palette 5 
+    --jet-a: #323031;
+    --jet-b: #3D3B3C;
+    --gray: #7F7979;
+    --silver: #C1BDB3;
+    --davy: #5F5B6B; 
+    /* palette 6 
+    --brown-night: #12130F;
+    --viridian: #5B9279;
+    --celadon: #8FCB9B;
+    --platinum: #EAE6E5;
+    --cinereous: #8F8073;
+    /* palette 7 
+    --rose-quartz: #BCABAE;
+    --night: #0F0F0F;
+    --jet: #2D2E2E;
+    --dim-gray: #716969;
+    --white: #FBFBFB;*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    font-size: 1.1em;
+}

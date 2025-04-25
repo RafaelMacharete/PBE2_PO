@@ -1,0 +1,30 @@
+/* 
+#D5573B
+#885053
+#777DA7
+#94C9A9
+#C6ECAE
+ */
+
+.container {
+    height: 100vh;
+    background: #EBEBEB;
+    padding: 10px;
+}
+
+.title {
+    color: #3A6EA5;
+    text-align: center;
+    font-size: 10rem;
+}
+
+.containerButtons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.props{
+    font-size: 3em;
+    text-align: center;
+    margin: 20px;
+}

@@ -1,0 +1,13 @@
+.container {
+    background-color: var(--indigo);
+    color: var(--thistle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.title {
+    color: var(--thistle);
+    font-weight: bold;
+}
