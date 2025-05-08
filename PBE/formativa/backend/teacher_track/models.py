@@ -13,21 +13,21 @@ def validate_image_size(image):
         raise ValidationError("Imagem size must be lower than 1MB.")
 
 class Account(AbstractUser):
-    REQUIRED_FIELDS = ['email', 'nif', 'phone', 'birth_date', 'hire_date', 'subject']
+    REQUIRED_FIELDS = ['email', 'nif', 'phone', 'birth_date', 'hire_date', 'name']
 
     username_validator = MyValidator()
     username = models.CharField(
-        _('username'),
-        max_length=150,
+        _('nif'),
+        max_length=10,
         unique=True,
-        help_text=_('Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.'),
+        help_text=_('Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.'),
         validators=[username_validator],
             error_messages={
-            'unique': _("A user with that username already exists."),
+            'unique': _("A user with that nif already exists."),
         },
     )
     
-    nif = models.PositiveIntegerField(unique=True, )
+    name = models.CharField(max_length=100)
     subject = models.ForeignKey('Subject', on_delete=models.CASCADE, related_name='teachers', null=True, blank=True)
     email = models.EmailField(max_length=100, unique=True)
     phone = models.CharField(max_length=15, unique=True)

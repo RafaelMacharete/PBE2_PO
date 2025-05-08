@@ -5,25 +5,44 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 class LoginSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
-        data['username'] = {
+        data['user'] = {
             'username': self.user.username,
-            'email': self.user.email,
-            'role': self.user.role,
-            'ni': self.user.ni,
-            'subject': self.user.subject.name if self.user.subject else None,
-            'profile_picture': self.user.profile_picture.url if self.user.profile_picture else None,
         }
         return data
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ['id', 'username', 'ni', 'subject', 'name', 'email', 'phone', 'birth_date', 'hire_date', 'profile_picture', 'role', 'password']
+        fields = ['id', 'username', 'subject', 'email', 'phone', 'birth_date', 'hire_date', 'profile_picture', 'password', 'name']
         extra_kwargs = {
             'password': {'write_only': True},
-            'profile_picture': {'required': False}
         }
-
+    
+    def create(self, validated_data):
+        user = Account.objects.create_user(
+            username=validated_data['username'],
+            password=validated_data['password'],
+            subject=validated_data['subject'],
+            email=validated_data['email'],
+            birth_date=validated_data['birth_date'],
+            hire_date=validated_data['hire_date'],
+            phone=validated_data['phone'],
+            name=validated_data['name']
+        )
+        return user
+    
+    def update(self, instance, validated_data):
+        
+        password = validated_data.pop('password', None)
+        for key, value in validated_data.items():
+            setattr(instance, key, value)
+        
+        if password:
+            instance.set_password(password)
+            
+        instance.save()
+        return instance
+        
 class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject

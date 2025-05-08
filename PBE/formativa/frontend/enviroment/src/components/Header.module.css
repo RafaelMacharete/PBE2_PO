@@ -3,11 +3,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 0 16px;
 }
 
 .title {
     color: var(--thistle);
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }

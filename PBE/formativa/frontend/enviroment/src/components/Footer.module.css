@@ -1,11 +1,12 @@
 .container {
-    background-color: var(--indigo);
-    color: var(--thistle);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
+    background-color: var(--french-gray);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: var(--indigo);
 }
+
 
 .title {
     color: var(--thistle);

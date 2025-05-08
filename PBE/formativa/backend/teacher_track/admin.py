@@ -3,15 +3,15 @@ from django.contrib.auth.admin import UserAdmin
 from .models import Account, Classroom, Subject
 
 class AccountAdmin(UserAdmin):
-    list_display = ('username', 'nif', 'phone')
+    list_display = ('username', 'name', 'phone')
     fieldsets = UserAdmin.fieldsets + (
         (None, 
-            {'fields': ('nif', 'phone')}
+            {'fields': ('name', 'phone')}
             ),
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
         (None,
-         {'fields': ('nif', 'phone', 'profile_picture')}),
+         {'fields': ('name', 'phone', 'profile_picture')}),
     )
     
 admin.site.register(Classroom)

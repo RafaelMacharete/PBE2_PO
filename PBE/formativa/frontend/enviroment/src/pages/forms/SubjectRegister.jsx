@@ -1,4 +1,6 @@
-import styles from './TeacherLogin.module.css'
+// import styles from './TeacherLogin.module.css'
+import styles from './principal.module.css'
+
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
