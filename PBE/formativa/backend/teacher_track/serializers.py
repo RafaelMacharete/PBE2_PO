@@ -13,7 +13,7 @@ class LoginSerializer(TokenObtainPairSerializer):
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ['id', 'username', 'subject', 'email', 'phone', 'birth_date', 'hire_date', 'profile_picture', 'password', 'name']
+        fields = ['id', 'username', 'subject', 'email', 'phone', 'birth_date', 'hire_date', 'profile_picture', 'password', 'name', 'is_staff']
         extra_kwargs = {
             'password': {'write_only': True},
         }
@@ -27,7 +27,8 @@ class AccountSerializer(serializers.ModelSerializer):
             birth_date=validated_data['birth_date'],
             hire_date=validated_data['hire_date'],
             phone=validated_data['phone'],
-            name=validated_data['name']
+            name=validated_data['name'],
+            is_staff=validated_data['is_staff']
         )
         return user
     

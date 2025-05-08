@@ -24,7 +24,7 @@ class AccountRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
 
 '''
 Subjects API views
-'''         
+'''
 class SubjectListCreateView(ListCreateAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer

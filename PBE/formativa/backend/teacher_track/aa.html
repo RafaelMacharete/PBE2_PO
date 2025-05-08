@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="robots" content="NONE,NOARCHIVE">
-    <title>AttributeError
+    <title>KeyError
         at /api/accounts/</title>
     <style>
         html * {
@@ -321,11 +321,9 @@
 
 <body>
     <header id="summary">
-        <h1>AttributeError
+        <h1>KeyError
             at /api/accounts/</h1>
-        <pre class="exception_value">Got AttributeError when attempting to get a value for field `username` on serializer `AccountSerializer`.
-The serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.
-Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.</pre>
+        <pre class="exception_value">&#x27;is_staff&#x27;</pre>
         <table class="meta">
 
             <tr>
@@ -344,24 +342,22 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
             <tr>
                 <th scope="row">Exception Type:</th>
-                <td>AttributeError</td>
+                <td>KeyError</td>
             </tr>
 
 
             <tr>
                 <th scope="row">Exception Value:</th>
                 <td>
-                    <pre>Got AttributeError when attempting to get a value for field `username` on serializer `AccountSerializer`.
-The serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.
-Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.</pre>
+                    <pre>&#x27;is_staff&#x27;</pre>
                 </td>
             </tr>
 
 
             <tr>
                 <th scope="row">Exception Location:</th>
-                <td><span class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py</span>,
-                    line 470, in get_attribute</td>
+                <td><span class="fname">C:\Users\52752592809\Desktop\PBE2_PO\PBE\formativa\backend\teacher_track\serializers.py</span>,
+                    line 31, in create</td>
             </tr>
 
 
@@ -392,7 +388,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
             </tr>
             <tr>
                 <th scope="row">Server time:</th>
-                <td>Thu, 08 May 2025 17:37:10 +0000</td>
+                <td>Thu, 08 May 2025 18:34:21 +0000</td>
             </tr>
         </table>
     </header>
@@ -410,261 +406,6 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                 <ul class="traceback">
 
 
-                    <li class="frame user">
-
-                        <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py</code>,
-                        line 437, in get_attribute
-
-
-
-                        <div class="context" id="c2082487184640">
-
-                            <ol start="430" class="pre-context" id="pre2082487184640">
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre></pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>    def get_attribute(self, instance):</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>        &quot;&quot;&quot;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>        Given the *outgoing* object instance, return the primitive value</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>        that should be used for this field.</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>        &quot;&quot;&quot;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>        try:</pre>
-                                </li>
-
-                            </ol>
-
-                            <ol start="437" class="context-line">
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>            return get_attribute(instance, self.source_attrs)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
-                                </li>
-                            </ol>
-
-                            <ol start='438' class="post-context" id="post2082487184640">
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>        except BuiltinSignatureError as exc:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>            msg = (</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>                &#x27;Field source for `{serializer}.{field}` maps to a built-in &#x27;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>                &#x27;function type and is invalid. Define a property or method on &#x27;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>                &#x27;the `{instance}` instance that wraps the call to the built-in &#x27;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487184640', 'post2082487184640')">
-                                    <pre>                &#x27;function.&#x27;.format(</pre>
-                                </li>
-
-                            </ol>
-
-                        </div>
-
-
-
-
-                        <details>
-                            <summary class="commands">Local vars</summary>
-
-                            <table class="vars" id="v2082487184640">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Variable</th>
-                                        <th scope="col">Value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td>instance</td>
-                                        <td class="code">
-                                            <pre>(&lt;Account: Conta3&gt;, True)</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>msg</td>
-                                        <td class="code">
-                                            <pre>(&#x27;Got AttributeError when attempting to get a value for field `username` on &#x27;
- &#x27;serializer `AccountSerializer`.\n&#x27;
- &#x27;The serializer field might be named incorrectly and not match any attribute &#x27;
- &#x27;or key on the `tuple` instance.\n&#x27;
- &quot;Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.&quot;)</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>self</td>
-                                        <td class="code">
-                                            <pre>CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])</pre>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </details>
-
-                    </li>
-
-
-                    <li class="frame user">
-
-                        <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py</code>,
-                        line 104, in get_attribute
-
-
-
-                        <div class="context" id="c2082487187840">
-
-                            <ol start="97" class="pre-context" id="pre2082487187840">
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>    Also accepts either attribute lookup on objects or dictionary lookups.</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>    &quot;&quot;&quot;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>    for attr in attrs:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>        try:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>            if isinstance(instance, Mapping):</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>                instance = instance[attr]</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>            else:</pre>
-                                </li>
-
-                            </ol>
-
-                            <ol start="104" class="context-line">
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>                instance = getattr(instance, attr)
-                                ^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
-                                </li>
-                            </ol>
-
-                            <ol start='105' class="post-context" id="post2082487187840">
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>        except ObjectDoesNotExist:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>            return None</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>        if is_simple_callable(instance):</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>            try:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>                instance = instance()</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487187840', 'post2082487187840')">
-                                    <pre>            except (AttributeError, KeyError) as exc:</pre>
-                                </li>
-
-                            </ol>
-
-                        </div>
-
-
-
-
-                        <details>
-                            <summary class="commands">Local vars</summary>
-
-                            <table class="vars" id="v2082487187840">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Variable</th>
-                                        <th scope="col">Value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td>attr</td>
-                                        <td class="code">
-                                            <pre>&#x27;username&#x27;</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>attrs</td>
-                                        <td class="code">
-                                            <pre>[&#x27;username&#x27;]</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>instance</td>
-                                        <td class="code">
-                                            <pre>(&lt;Account: Conta3&gt;, True)</pre>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </details>
-
-                    </li>
-
-
-                    <li class="cause">
-                        <h3>
-
-                            During handling of the above exception (&#x27;tuple&#x27; object has no attribute
-                            &#x27;username&#x27;), another exception occurred:
-
-                        </h3>
-                    </li>
-
                     <li class="frame django">
 
                         <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py</code>,
@@ -672,70 +413,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487316416">
+                        <div class="context" id="c2155193777280">
 
-                            <ol start="48" class="pre-context" id="pre2082487316416">
+                            <ol start="48" class="pre-context" id="pre2155193777280">
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>        return inner</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>    else:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>        @wraps(get_response)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>        def inner(request):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>            try:</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="55" class="context-line">
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>                response = get_response(request)
                                ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='56' class="post-context" id="post2082487316416">
+                            <ol start='56' class="post-context" id="post2155193777280">
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>            except Exception as exc:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>                response = response_for_exception(request, exc)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>            return response</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre>        return inner</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316416', 'post2082487316416')">
+                                <li onclick="toggle('pre2155193777280', 'post2155193777280')">
                                     <pre></pre>
                                 </li>
 
@@ -749,7 +490,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487316416">
+                            <table class="vars" id="v2155193777280">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -761,14 +502,14 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>exc</td>
                                         <td class="code">
-                                            <pre>AttributeError(&quot;Got AttributeError when attempting to get a value for field `username` on serializer `AccountSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.\nOriginal exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.&quot;)</pre>
+                                            <pre>KeyError(&#x27;is_staff&#x27;)</pre>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>get_response</td>
                                         <td class="code">
-                                            <pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x000001E4DDACE660&gt;&gt;</pre>
+                                            <pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x000001F5CB58E660&gt;&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -793,70 +534,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487316480">
+                        <div class="context" id="c2155193767104">
 
-                            <ol start="190" class="pre-context" id="pre2082487316480">
+                            <ol start="190" class="pre-context" id="pre2155193767104">
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>        if response is None:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>            wrapped_callback = self.make_view_atomic(callback)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>            # If it is an asynchronous view, run it in a subthread.</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>            if iscoroutinefunction(wrapped_callback):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>            try:</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="197" class="context-line">
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='198' class="post-context" id="post2082487316480">
+                            <ol start='198' class="post-context" id="post2155193767104">
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>            except Exception as e:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>                response = self.process_exception_by_middleware(e, request)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>                if response is None:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>                    raise</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487316480', 'post2082487316480')">
+                                <li onclick="toggle('pre2155193767104', 'post2155193767104')">
                                     <pre>        # Complain if the view returned None (a common error).</pre>
                                 </li>
 
@@ -870,7 +611,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487316480">
+                            <table class="vars" id="v2155193767104">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -882,7 +623,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>callback</td>
                                         <td class="code">
-                                            <pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x000001E4DDAA3CE0&gt;</pre>
+                                            <pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x000001F5CB563CE0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -924,14 +665,14 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x000001E4DDACE660&gt;</pre>
+                                            <pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x000001F5CB58E660&gt;</pre>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>wrapped_callback</td>
                                         <td class="code">
-                                            <pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x000001E4DDAA3CE0&gt;</pre>
+                                            <pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x000001F5CB563CE0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -949,62 +690,62 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487317824">
+                        <div class="context" id="c2155193767360">
 
-                            <ol start="58" class="pre-context" id="pre2082487317824">
+                            <ol start="58" class="pre-context" id="pre2155193767360">
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>        async def _view_wrapper(request, *args, **kwargs):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>            return await view_func(request, *args, **kwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>    else:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>        def _view_wrapper(request, *args, **kwargs):</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="65" class="context-line">
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>            return view_func(request, *args, **kwargs)
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='66' class="post-context" id="post2082487317824">
+                            <ol start='66' class="post-context" id="post2155193767360">
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>    _view_wrapper.csrf_exempt = True</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317824', 'post2082487317824')">
+                                <li onclick="toggle('pre2155193767360', 'post2155193767360')">
                                     <pre>    return wraps(view_func)(_view_wrapper)</pre>
                                 </li>
 
@@ -1018,7 +759,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487317824">
+                            <table class="vars" id="v2155193767360">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1051,7 +792,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>view_func</td>
                                         <td class="code">
-                                            <pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x000001E4DDAA3C40&gt;</pre>
+                                            <pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x000001F5CB563C40&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1069,70 +810,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487185792">
+                        <div class="context" id="c2155193774592">
 
-                            <ol start="97" class="pre-context" id="pre2082487185792">
+                            <ol start="97" class="pre-context" id="pre2155193774592">
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>            self = cls(**initkwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>            self.setup(request, *args, **kwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>            if not hasattr(self, &quot;request&quot;):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>                raise AttributeError(</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>                    &quot;%s instance has no &#x27;request&#x27; attribute. Did you override &quot;</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>                    &quot;setup() and forget to call super()?&quot; % cls.__name__</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>                )</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="104" class="context-line">
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>            return self.dispatch(request, *args, **kwargs)
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='105' class="post-context" id="post2082487185792">
+                            <ol start='105' class="post-context" id="post2155193774592">
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>        view.view_class = cls</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>        view.view_initkwargs = initkwargs</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>        # __name__ and __qualname__ are intentionally left unchanged as</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487185792', 'post2082487185792')">
+                                <li onclick="toggle('pre2155193774592', 'post2155193774592')">
                                     <pre>        # view_class should be used to robustly determine the name of the view</pre>
                                 </li>
 
@@ -1146,7 +887,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487185792">
+                            <table class="vars" id="v2155193774592">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1193,7 +934,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1211,70 +952,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487317184">
+                        <div class="context" id="c2155193771584">
 
-                            <ol start="502" class="pre-context" id="pre2082487317184">
+                            <ol start="502" class="pre-context" id="pre2155193771584">
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>                                  self.http_method_not_allowed)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>            else:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>                handler = self.http_method_not_allowed</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>            response = handler(request, *args, **kwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>        except Exception as exc:</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="509" class="context-line">
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>            response = self.handle_exception(exc)
                             ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='510' class="post-context" id="post2082487317184">
+                            <ol start='510' class="post-context" id="post2155193771584">
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>        return self.response</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>    def options(self, request, *args, **kwargs):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317184', 'post2082487317184')">
+                                <li onclick="toggle('pre2155193771584', 'post2155193771584')">
                                     <pre>        &quot;&quot;&quot;</pre>
                                 </li>
 
@@ -1288,7 +1029,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487317184">
+                            <table class="vars" id="v2155193771584">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1307,7 +1048,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>handler</td>
                                         <td class="code">
-                                            <pre>&lt;bound method ListCreateAPIView.post of &lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;&gt;</pre>
+                                            <pre>&lt;bound method ListCreateAPIView.post of &lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1328,7 +1069,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1346,70 +1087,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487308608">
+                        <div class="context" id="c2155193766272">
 
-                            <ol start="462" class="pre-context" id="pre2082487308608">
+                            <ol start="462" class="pre-context" id="pre2155193766272">
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        exception_handler = self.get_exception_handler()</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        context = self.get_exception_handler_context()</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        response = exception_handler(exc, context)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        if response is None:</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="469" class="context-line">
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>            self.raise_uncaught_exception(exc)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='470' class="post-context" id="post2082487308608">
+                            <ol start='470' class="post-context" id="post2155193766272">
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        response.exception = True</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        return response</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>    def raise_uncaught_exception(self, exc):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308608', 'post2082487308608')">
+                                <li onclick="toggle('pre2155193766272', 'post2155193766272')">
                                     <pre>        if settings.DEBUG:</pre>
                                 </li>
 
@@ -1423,7 +1164,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487308608">
+                            <table class="vars" id="v2155193766272">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1438,21 +1179,21 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                             <pre>{&#x27;args&#x27;: (),
  &#x27;kwargs&#x27;: {},
  &#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;,
- &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;}</pre>
+ &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;}</pre>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>exc</td>
                                         <td class="code">
-                                            <pre>AttributeError(&quot;Got AttributeError when attempting to get a value for field `username` on serializer `AccountSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.\nOriginal exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.&quot;)</pre>
+                                            <pre>KeyError(&#x27;is_staff&#x27;)</pre>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>exception_handler</td>
                                         <td class="code">
-                                            <pre>&lt;function exception_handler at 0x000001E4DDA94900&gt;</pre>
+                                            <pre>&lt;function exception_handler at 0x000001F5CB554900&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1466,7 +1207,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1484,70 +1225,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082478504512">
+                        <div class="context" id="c2155193771968">
 
-                            <ol start="473" class="pre-context" id="pre2082478504512">
+                            <ol start="473" class="pre-context" id="pre2155193771968">
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>    def raise_uncaught_exception(self, exc):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>        if settings.DEBUG:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>            request = self.request</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>            renderer_format = getattr(request.accepted_renderer, &#x27;format&#x27;)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>            use_plaintext_traceback = renderer_format not in (&#x27;html&#x27;, &#x27;api&#x27;, &#x27;admin&#x27;)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>            request.force_plaintext_errors(use_plaintext_traceback)</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="480" class="context-line">
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>        raise exc
              ^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='481' class="post-context" id="post2082478504512">
+                            <ol start='481' class="post-context" id="post2155193771968">
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>    # Note: Views are made CSRF exempt from within `as_view` as to prevent</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>    # accidental removal of this exemption in cases where `dispatch` needs to</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>    # be overridden.</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>    def dispatch(self, request, *args, **kwargs):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082478504512', 'post2082478504512')">
+                                <li onclick="toggle('pre2155193771968', 'post2155193771968')">
                                     <pre>        &quot;&quot;&quot;</pre>
                                 </li>
 
@@ -1561,7 +1302,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082478504512">
+                            <table class="vars" id="v2155193771968">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1573,7 +1314,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>exc</td>
                                         <td class="code">
-                                            <pre>AttributeError(&quot;Got AttributeError when attempting to get a value for field `username` on serializer `AccountSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.\nOriginal exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.&quot;)</pre>
+                                            <pre>KeyError(&#x27;is_staff&#x27;)</pre>
                                         </td>
                                     </tr>
 
@@ -1594,7 +1335,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1619,70 +1360,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082487319680">
+                        <div class="context" id="c2155193772416">
 
-                            <ol start="499" class="pre-context" id="pre2082487319680">
+                            <ol start="499" class="pre-context" id="pre2155193772416">
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>            # Get the appropriate handler method</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>            if request.method.lower() in self.http_method_names:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>                handler = getattr(self, request.method.lower(),</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>                                  self.http_method_not_allowed)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>            else:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>                handler = self.http_method_not_allowed</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre></pre>
                                 </li>
 
                             </ol>
 
                             <ol start="506" class="context-line">
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>            response = handler(request, *args, **kwargs)
                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='507' class="post-context" id="post2082487319680">
+                            <ol start='507' class="post-context" id="post2155193772416">
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>        except Exception as exc:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>            response = self.handle_exception(exc)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487319680', 'post2082487319680')">
+                                <li onclick="toggle('pre2155193772416', 'post2155193772416')">
                                     <pre>        return self.response</pre>
                                 </li>
 
@@ -1696,7 +1437,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487319680">
+                            <table class="vars" id="v2155193772416">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1715,7 +1456,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>handler</td>
                                         <td class="code">
-                                            <pre>&lt;bound method ListCreateAPIView.post of &lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;&gt;</pre>
+                                            <pre>&lt;bound method ListCreateAPIView.post of &lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1736,7 +1477,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1754,70 +1495,70 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
 
 
-                        <div class="context" id="c2082477378944">
+                        <div class="context" id="c2155194313536">
 
-                            <ol start="239" class="pre-context" id="pre2082477378944">
+                            <ol start="239" class="pre-context" id="pre2155194313536">
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>    &quot;&quot;&quot;</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>    Concrete view for listing a queryset or creating a model instance.</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>    &quot;&quot;&quot;</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>    def get(self, request, *args, **kwargs):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>        return self.list(request, *args, **kwargs)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>    def post(self, request, *args, **kwargs):</pre>
                                 </li>
 
                             </ol>
 
                             <ol start="246" class="context-line">
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>        return self.create(request, *args, **kwargs)
                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='247' class="post-context" id="post2082477378944">
+                            <ol start='247' class="post-context" id="post2155194313536">
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>class RetrieveUpdateAPIView(mixins.RetrieveModelMixin,</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>                            mixins.UpdateModelMixin,</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>                            GenericAPIView):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082477378944', 'post2082477378944')">
+                                <li onclick="toggle('pre2155194313536', 'post2155194313536')">
                                     <pre>    &quot;&quot;&quot;</pre>
                                 </li>
 
@@ -1831,7 +1572,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082477378944">
+                            <table class="vars" id="v2155194313536">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1864,7 +1605,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
@@ -1878,75 +1619,75 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                     <li class="frame user">
 
                         <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\mixins.py</code>,
-                        line 20, in create
+                        line 19, in create
 
 
 
-                        <div class="context" id="c2082487317760">
+                        <div class="context" id="c2155193773120">
 
-                            <ol start="13" class="pre-context" id="pre2082487317760">
+                            <ol start="12" class="pre-context" id="pre2155193773120">
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
+                                    <pre>class CreateModelMixin:</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>    &quot;&quot;&quot;</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>    Create a model instance.</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>    &quot;&quot;&quot;</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>    def create(self, request, *args, **kwargs):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>        serializer = self.get_serializer(data=request.data)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>        serializer.is_valid(raise_exception=True)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
-                                    <pre>        self.perform_create(serializer)</pre>
-                                </li>
-
                             </ol>
 
-                            <ol start="20" class="context-line">
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
-                                    <pre>        headers = self.get_success_headers(serializer.data)
-                                               ^^^^^^^^^^^^^^^</pre> <span>…</span>
+                            <ol start="19" class="context-line">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
+                                    <pre>        self.perform_create(serializer)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='21' class="post-context" id="post2082487317760">
+                            <ol start='20' class="post-context" id="post2155193773120">
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
+                                    <pre>        headers = self.get_success_headers(serializer.data)</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>    def perform_create(self, serializer):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre>        serializer.save()</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
+                                <li onclick="toggle('pre2155193773120', 'post2155193773120')">
                                     <pre></pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317760', 'post2082487317760')">
-                                    <pre>    def get_success_headers(self, data):</pre>
                                 </li>
 
                             </ol>
@@ -1959,7 +1700,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487317760">
+                            <table class="vars" id="v2155193773120">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -1992,14 +1733,14 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001E4DDB6A3C0&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>serializer</td>
                                         <td class="code">
-                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;conta7&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;aaa@b.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;121&#x27;, &#x27;name&#x27;: &#x27;Conta3&#x27;, &#x27;subject&#x27;: None}):
+                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;admin&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;admin@admin.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;123&#x27;, &#x27;name&#x27;: &#x27;Conta1&#x27;, &#x27;subject&#x27;: None, &#x27;is_staff&#x27;: True}):
     id = IntegerField(label=&#x27;ID&#x27;, read_only=True)
     username = CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])
     subject = PrimaryKeyRelatedField(allow_null=True, queryset=Subject.objects.all(), required=False)
@@ -2022,76 +1763,76 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
                     <li class="frame user">
 
-                        <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py</code>,
-                        line 571, in data
+                        <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\mixins.py</code>,
+                        line 24, in perform_create
 
 
 
-                        <div class="context" id="c2082487308672">
+                        <div class="context" id="c2155193774784">
 
-                            <ol start="564" class="pre-context" id="pre2082487308672">
+                            <ol start="17" class="pre-context" id="pre2155193774784">
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>        return BoundField(field, value, error)</pre>
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        serializer = self.get_serializer(data=request.data)</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        serializer.is_valid(raise_exception=True)</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        self.perform_create(serializer)</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        headers = self.get_success_headers(serializer.data)</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>    # Include a backlink to the serializer class on return objects.</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>    # Allows renderers such as HTMLFormRenderer to get the full field info.</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre></pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>    @property</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>    def data(self):</pre>
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>    def perform_create(self, serializer):</pre>
                                 </li>
 
                             </ol>
 
-                            <ol start="571" class="context-line">
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>        ret = super().data
-                   ^^^^^^^^^^^^</pre> <span>…</span>
+                            <ol start="24" class="context-line">
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        serializer.save()
+            ^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='572' class="post-context" id="post2082487308672">
+                            <ol start='25' class="post-context" id="post2155193774784">
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>        return ReturnDict(ret, serializer=self)</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>    @property</pre>
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>    def get_success_headers(self, data):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>    def errors(self):</pre>
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        try:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>        ret = super().errors</pre>
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>            return {&#x27;Location&#x27;: str(data[api_settings.URL_FIELD_NAME])}</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487308672', 'post2082487308672')">
-                                    <pre>        if isinstance(ret, list) and len(ret) == 1 and getattr(ret[0], &#x27;code&#x27;, None) == &#x27;null&#x27;:</pre>
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>        except (TypeError, KeyError):</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193774784', 'post2155193774784')">
+                                    <pre>            return {}</pre>
                                 </li>
 
                             </ol>
@@ -2104,7 +1845,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487308672">
+                            <table class="vars" id="v2155193774784">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -2114,16 +1855,16 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                 <tbody>
 
                                     <tr>
-                                        <td>__class__</td>
+                                        <td>self</td>
                                         <td class="code">
-                                            <pre>&lt;class &#x27;rest_framework.serializers.Serializer&#x27;&gt;</pre>
+                                            <pre>&lt;teacher_track.views.AccountListCreateView object at 0x000001F5CB66D6D0&gt;</pre>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td>self</td>
+                                        <td>serializer</td>
                                         <td class="code">
-                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;conta7&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;aaa@b.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;121&#x27;, &#x27;name&#x27;: &#x27;Conta3&#x27;, &#x27;subject&#x27;: None}):
+                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;admin&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;admin@admin.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;123&#x27;, &#x27;name&#x27;: &#x27;Conta1&#x27;, &#x27;subject&#x27;: None, &#x27;is_staff&#x27;: True}):
     id = IntegerField(label=&#x27;ID&#x27;, read_only=True)
     username = CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])
     subject = PrimaryKeyRelatedField(allow_null=True, queryset=Subject.objects.all(), required=False)
@@ -2147,74 +1888,74 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                     <li class="frame user">
 
                         <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py</code>,
-                        line 249, in data
+                        line 208, in save
 
 
 
-                        <div class="context" id="c2082487317632">
+                        <div class="context" id="c2155193766720">
 
-                            <ol start="242" class="pre-context" id="pre2082487317632">
+                            <ol start="201" class="pre-context" id="pre2155193766720">
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>                &#x27;You should either call `.is_valid()` first, &#x27;</pre>
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>                &#x27;or access `.initial_data` instead.&#x27;</pre>
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>        if self.instance is not None:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>            self.instance = self.update(self.instance, validated_data)</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>            assert self.instance is not None, (</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>                &#x27;`update()` did not return an object instance.&#x27;</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
                                     <pre>            )</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>            raise AssertionError(msg)</pre>
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>        else:</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
+                            </ol>
+
+                            <ol start="208" class="context-line">
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>            self.instance = self.create(validated_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
+                                </li>
+                            </ol>
+
+                            <ol start='209' class="post-context" id="post2155193766720">
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>            assert self.instance is not None, (</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>                &#x27;`create()` did not return an object instance.&#x27;</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>            )</pre>
+                                </li>
+
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
                                     <pre></pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>        if not hasattr(self, &#x27;_data&#x27;):</pre>
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
+                                    <pre>        return self.instance</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>            if self.instance is not None and not getattr(self, &#x27;_errors&#x27;, None):</pre>
-                                </li>
-
-                            </ol>
-
-                            <ol start="249" class="context-line">
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>                self._data = self.to_representation(self.instance)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
-                                </li>
-                            </ol>
-
-                            <ol start='250' class="post-context" id="post2082487317632">
-
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>            elif hasattr(self, &#x27;_validated_data&#x27;) and not getattr(self, &#x27;_errors&#x27;, None):</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>                self._data = self.to_representation(self.validated_data)</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>            else:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>                self._data = self.get_initial()</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
-                                    <pre>        return self._data</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317632', 'post2082487317632')">
+                                <li onclick="toggle('pre2155193766720', 'post2155193766720')">
                                     <pre></pre>
                                 </li>
 
@@ -2228,7 +1969,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487317632">
+                            <table class="vars" id="v2155193766720">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -2238,145 +1979,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                 <tbody>
 
                                     <tr>
-                                        <td>self</td>
-                                        <td class="code">
-                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;conta7&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;aaa@b.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;121&#x27;, &#x27;name&#x27;: &#x27;Conta3&#x27;, &#x27;subject&#x27;: None}):
-    id = IntegerField(label=&#x27;ID&#x27;, read_only=True)
-    username = CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])
-    subject = PrimaryKeyRelatedField(allow_null=True, queryset=Subject.objects.all(), required=False)
-    email = EmailField(max_length=100, validators=[&lt;UniqueValidator(queryset=Account.objects.all())&gt;])
-    phone = CharField(max_length=15, validators=[&lt;UniqueValidator(queryset=Account.objects.all())&gt;])
-    birth_date = DateField()
-    hire_date = DateField()
-    profile_picture = ImageField(allow_null=True, max_length=100, required=False, validators=[&lt;function validate_image_size&gt;])
-    password = CharField(max_length=128, write_only=True)
-    name = CharField(max_length=100)</pre>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </details>
-
-                    </li>
-
-
-                    <li class="frame user">
-
-                        <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py</code>,
-                        line 525, in to_representation
-
-
-
-                        <div class="context" id="c2082487317504">
-
-                            <ol start="518" class="pre-context" id="pre2082487317504">
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>        Object instance -&gt; Dict of primitive datatypes.</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>        &quot;&quot;&quot;</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>        ret = {}</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>        fields = self._readable_fields</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre></pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>        for field in fields:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>            try:</pre>
-                                </li>
-
-                            </ol>
-
-                            <ol start="525" class="context-line">
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>                attribute = field.get_attribute(instance)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
-                                </li>
-                            </ol>
-
-                            <ol start='526' class="post-context" id="post2082487317504">
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>            except SkipField:</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>                continue</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre></pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>            # We skip `to_representation` for `None` values so that fields do</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>            # not have to explicitly deal with that case.</pre>
-                                </li>
-
-                                <li onclick="toggle('pre2082487317504', 'post2082487317504')">
-                                    <pre>            #</pre>
-                                </li>
-
-                            </ol>
-
-                        </div>
-
-
-
-
-                        <details>
-                            <summary class="commands">Local vars</summary>
-
-                            <table class="vars" id="v2082487317504">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Variable</th>
-                                        <th scope="col">Value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td>field</td>
-                                        <td class="code">
-                                            <pre>CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>fields</td>
-                                        <td class="code">
-                                            <pre>&lt;generator object Serializer._readable_fields at 0x000001E4DDE9C940&gt;</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>instance</td>
-                                        <td class="code">
-                                            <pre>(&lt;Account: Conta3&gt;, True)</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>ret</td>
+                                        <td>kwargs</td>
                                         <td class="code">
                                             <pre>{}</pre>
                                         </td>
@@ -2385,7 +1988,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                     <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;conta7&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;aaa@b.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;121&#x27;, &#x27;name&#x27;: &#x27;Conta3&#x27;, &#x27;subject&#x27;: None}):
+                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;admin&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;admin@admin.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;123&#x27;, &#x27;name&#x27;: &#x27;Conta1&#x27;, &#x27;subject&#x27;: None, &#x27;is_staff&#x27;: True}):
     id = IntegerField(label=&#x27;ID&#x27;, read_only=True)
     username = CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])
     subject = PrimaryKeyRelatedField(allow_null=True, queryset=Subject.objects.all(), required=False)
@@ -2399,6 +2002,20 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td>validated_data</td>
+                                        <td class="code">
+                                            <pre>{&#x27;birth_date&#x27;: datetime.date(2025, 11, 11),
+ &#x27;email&#x27;: &#x27;admin@admin.com&#x27;,
+ &#x27;hire_date&#x27;: datetime.date(2024, 11, 11),
+ &#x27;name&#x27;: &#x27;Conta1&#x27;,
+ &#x27;password&#x27;: &#x27;123&#x27;,
+ &#x27;phone&#x27;: &#x27;123&#x27;,
+ &#x27;subject&#x27;: None,
+ &#x27;username&#x27;: &#x27;admin&#x27;}</pre>
+                                        </td>
+                                    </tr>
+
                                 </tbody>
                             </table>
                         </details>
@@ -2408,76 +2025,76 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
 
                     <li class="frame user">
 
-                        <code class="fname">C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py</code>,
-                        line 470, in get_attribute
+                        <code class="fname">C:\Users\52752592809\Desktop\PBE2_PO\PBE\formativa\backend\teacher_track\serializers.py</code>,
+                        line 31, in create
 
 
 
-                        <div class="context" id="c2082487181312">
+                        <div class="context" id="c2155186137152">
 
-                            <ol start="463" class="pre-context" id="pre2082487181312">
+                            <ol start="24" class="pre-context" id="pre2155186137152">
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>                    exc_type=type(exc).__name__,</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            password=validated_data[&#x27;password&#x27;],</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>                    field=self.field_name,</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            subject=validated_data[&#x27;subject&#x27;],</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>                    serializer=self.parent.__class__.__name__,</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            email=validated_data[&#x27;email&#x27;],</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>                    instance=instance.__class__.__name__,</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            birth_date=validated_data[&#x27;birth_date&#x27;],</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>                    exc=exc</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            hire_date=validated_data[&#x27;hire_date&#x27;],</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>                )</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            phone=validated_data[&#x27;phone&#x27;],</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>            )</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            name=validated_data[&#x27;name&#x27;],</pre>
                                 </li>
 
                             </ol>
 
-                            <ol start="470" class="context-line">
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>            raise type(exc)(msg)
-                 ^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
+                            <ol start="31" class="context-line">
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>            is_staff=validated_data[&#x27;is_staff&#x27;]
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span>
                                 </li>
                             </ol>
 
-                            <ol start='471' class="post-context" id="post2082487181312">
+                            <ol start='32' class="post-context" id="post2155186137152">
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre></pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>        )</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>    def get_default(self):</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>        return user</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>        &quot;&quot;&quot;</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>    </pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>        Return the default value to use when validating data if no input</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>    def update(self, instance, validated_data):</pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre>        is provided for this field.</pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>        </pre>
                                 </li>
 
-                                <li onclick="toggle('pre2082487181312', 'post2082487181312')">
-                                    <pre></pre>
+                                <li onclick="toggle('pre2155186137152', 'post2155186137152')">
+                                    <pre>        password = validated_data.pop(&#x27;password&#x27;, None)</pre>
                                 </li>
 
                             </ol>
@@ -2490,7 +2107,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                         <details>
                             <summary class="commands">Local vars</summary>
 
-                            <table class="vars" id="v2082487181312">
+                            <table class="vars" id="v2155186137152">
                                 <thead>
                                     <tr>
                                         <th scope="col">Variable</th>
@@ -2500,27 +2117,33 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                                 <tbody>
 
                                     <tr>
-                                        <td>instance</td>
-                                        <td class="code">
-                                            <pre>(&lt;Account: Conta3&gt;, True)</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>msg</td>
-                                        <td class="code">
-                                            <pre>(&#x27;Got AttributeError when attempting to get a value for field `username` on &#x27;
- &#x27;serializer `AccountSerializer`.\n&#x27;
- &#x27;The serializer field might be named incorrectly and not match any attribute &#x27;
- &#x27;or key on the `tuple` instance.\n&#x27;
- &quot;Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.&quot;)</pre>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
                                         <td>self</td>
                                         <td class="code">
-                                            <pre>CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])</pre>
+                                            <pre>AccountSerializer(context={&#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/api/accounts/&#x27;&gt;, &#x27;format&#x27;: None, &#x27;view&#x27;: &lt;teacher_track.views.AccountListCreateView object&gt;}, data={&#x27;username&#x27;: &#x27;admin&#x27;, &#x27;password&#x27;: &#x27;123&#x27;, &#x27;email&#x27;: &#x27;admin@admin.com&#x27;, &#x27;birth_date&#x27;: &#x27;2025-11-11&#x27;, &#x27;hire_date&#x27;: &#x27;2024-11-11&#x27;, &#x27;phone&#x27;: &#x27;123&#x27;, &#x27;name&#x27;: &#x27;Conta1&#x27;, &#x27;subject&#x27;: None, &#x27;is_staff&#x27;: True}):
+    id = IntegerField(label=&#x27;ID&#x27;, read_only=True)
+    username = CharField(help_text=&#x27;Required. 10 characters or fewer. Letters, digits and @/./+/-/_ only.&#x27;, label=&#x27;Nif&#x27;, max_length=10, validators=[&lt;teacher_track.models.MyValidator object&gt;, &lt;UniqueValidator(queryset=Account.objects.all())&gt;])
+    subject = PrimaryKeyRelatedField(allow_null=True, queryset=Subject.objects.all(), required=False)
+    email = EmailField(max_length=100, validators=[&lt;UniqueValidator(queryset=Account.objects.all())&gt;])
+    phone = CharField(max_length=15, validators=[&lt;UniqueValidator(queryset=Account.objects.all())&gt;])
+    birth_date = DateField()
+    hire_date = DateField()
+    profile_picture = ImageField(allow_null=True, max_length=100, required=False, validators=[&lt;function validate_image_size&gt;])
+    password = CharField(max_length=128, write_only=True)
+    name = CharField(max_length=100)</pre>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>validated_data</td>
+                                        <td class="code">
+                                            <pre>{&#x27;birth_date&#x27;: datetime.date(2025, 11, 11),
+ &#x27;email&#x27;: &#x27;admin@admin.com&#x27;,
+ &#x27;hire_date&#x27;: datetime.date(2024, 11, 11),
+ &#x27;name&#x27;: &#x27;Conta1&#x27;,
+ &#x27;password&#x27;: &#x27;123&#x27;,
+ &#x27;phone&#x27;: &#x27;123&#x27;,
+ &#x27;subject&#x27;: None,
+ &#x27;username&#x27;: &#x27;admin&#x27;}</pre>
                                         </td>
                                     </tr>
 
@@ -2537,7 +2160,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                 <div id="pastebinTraceback" class="pastebin">
                     <input type="hidden" name="language" value="PythonConsole">
                     <input type="hidden" name="title"
-      value="AttributeError at /api/accounts/">
+      value="KeyError at /api/accounts/">
                     <input type="hidden" name="source" value="Django Dpaste Agent">
                     <input type="hidden" name="poster" value="Django">
                     <textarea name="content" id="traceback_area" cols="140" rows="25">
@@ -2573,14 +2196,6 @@ Installed Middleware:
 
 
 Traceback (most recent call last):
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py", line 437, in get_attribute
-    return get_attribute(instance, self.source_attrs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py", line 104, in get_attribute
-    instance = getattr(instance, attr)
-               ^^^^^^^^^^^^^^^^^^^^^^^
-
-During handling of the above exception (&#x27;tuple&#x27; object has no attribute &#x27;username&#x27;), another exception occurred:
   File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
@@ -2608,26 +2223,21 @@ During handling of the above exception (&#x27;tuple&#x27; object has no attribut
   File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\generics.py", line 246, in post
     return self.create(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\mixins.py", line 20, in create
-    headers = self.get_success_headers(serializer.data)
-                                       ^^^^^^^^^^^^^^^
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 571, in data
-    ret = super().data
-          ^^^^^^^^^^^^
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 249, in data
-    self._data = self.to_representation(self.instance)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 525, in to_representation
-    attribute = field.get_attribute(instance)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\fields.py", line 470, in get_attribute
-    raise type(exc)(msg)
-    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\52752592809\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\52752592809\Desktop\PBE2_PO\PBE\formativa\backend\teacher_track\serializers.py", line 31, in create
+    is_staff=validated_data[&#x27;is_staff&#x27;]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Exception Type: AttributeError at /api/accounts/
-Exception Value: Got AttributeError when attempting to get a value for field `username` on serializer `AccountSerializer`.
-The serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.
-Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;username&#x27;.
+Exception Type: KeyError at /api/accounts/
+Exception Value: &#x27;is_staff&#x27;
 </textarea>
                     <br><br>
                     <input type="submit" value="Share this traceback on a public website">
@@ -2756,7 +2366,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                     <tr>
                         <td>CONTENT_LENGTH</td>
                         <td class="code">
-                            <pre>&#x27;212&#x27;</pre>
+                            <pre>&#x27;240&#x27;</pre>
                         </td>
                     </tr>
 
@@ -3322,7 +2932,7 @@ Original exception text was: &#x27;tuple&#x27; object has no attribute &#x27;use
                     <tr>
                         <td>wsgi.input</td>
                         <td class="code">
-                            <pre>&lt;django.core.handlers.wsgi.LimitedStream object at 0x000001E4DDBA05E0&gt;</pre>
+                            <pre>&lt;django.core.handlers.wsgi.LimitedStream object at 0x000001F5CB711E40&gt;</pre>
                         </td>
                     </tr>
 
