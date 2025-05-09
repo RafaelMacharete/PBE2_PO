@@ -1,141 +1,151 @@
-🏫 Sistema de Gerenciamento de Professores e Ambientes
-Este projeto tem como objetivo facilitar a gestão educacional em instituições de ensino por meio de um sistema que organiza o cadastro de professores, disciplinas e reservas de salas de aula. O sistema foi desenvolvido utilizando Django e Django REST Framework, com foco na separação de permissões entre gestores e professores.
+# 🎓 Sistema de Gerenciamento de Professores e Ambientes
 
-📌 Contexto
-A gestão educacional envolve desafios diários, como a organização de horários, professores, disciplinas e espaços físicos. Este sistema surge como solução para automatizar e centralizar essas informações, promovendo um ambiente educacional mais eficiente, transparente e menos sujeito a erros operacionais.
+Um sistema desenvolvido com **Django** e **Django REST Framework** que permite a gestão eficiente de professores, disciplinas e reservas de salas em instituições de ensino. Focado em facilitar o trabalho de **gestores** e oferecer uma interface segura de **visualização para professores**.
 
-🎯 Objetivo
-Desenvolver uma API RESTful para gerenciamento de:
+---
 
-Professores
+## 📘 Sumário
 
-Disciplinas
+- [🧠 Contexto](#-contexto)
+- [🎯 Objetivo](#-objetivo)
+- [⚙️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [🛠️ Funcionalidades](#-funcionalidades)
+- [🗃️ Modelo de Dados](#-modelo-de-dados)
+- [🚀 Etapas de Desenvolvimento](#-etapas-de-desenvolvimento)
+- [📦 Instalação](#-instalação)
+- [📬 Contato](#-contato)
 
-Reservas de Ambientes
+---
 
-A aplicação conta com autenticação e autorização de usuários, garantindo diferentes níveis de acesso:
+## 🧠 Contexto
 
-Gestores: podem realizar todas as operações (CRUD).
+A administração educacional envolve a organização de professores, disciplinas e espaços físicos. Com o aumento da complexidade das operações escolares, torna-se essencial o uso de sistemas tecnológicos para otimizar a gestão e garantir um ambiente mais organizado, eficiente e transparente.
 
-Professores: acesso somente leitura às suas disciplinas e reservas.
+---
 
-⚙️ Tecnologias Utilizadas
-Python
+## 🎯 Objetivo
 
-Django
+Criar um sistema para:
 
-Django REST Framework
+- **Cadastrar, visualizar, atualizar e excluir** professores, disciplinas e reservas.
+- Restringir permissões com autenticação:
+  - **Gestores** têm acesso completo (CRUD).
+  - **Professores** possuem acesso restrito à **visualização** das disciplinas e reservas relacionadas.
 
-MySQL
+---
 
-JWT (para autenticação)
+## ⚙️ Tecnologias Utilizadas
 
-Swagger/Postman (para documentação da API)
+- 🐍 Python 3.x  
+- 🌐 Django  
+- 🔄 Django REST Framework  
+- 🛡️ JWT (JSON Web Token)  
+- 🗄️ MySQL  
+- 📄 Swagger / Postman (Documentação da API)
 
-🗂️ Funcionalidades do Back-end
-📚 Professores
- Criar professor
+---
 
- Listar todos os professores
+## 🛠️ Funcionalidades
 
- Atualizar informações
+### 👨‍🏫 Professores (Gestores)
 
- Deletar professor
+- [x] Criar
+- [x] Listar
+- [x] Atualizar
+- [x] Excluir
 
-📖 Disciplinas
- Criar disciplina
+### 📚 Disciplinas (Gestores)
 
- Listar disciplinas
+- [x] Criar
+- [x] Listar
+- [x] Atualizar
+- [x] Excluir
 
- Atualizar informações
+### 🏫 Reservas de Ambiente (Gestores)
 
- Deletar disciplina
+- [x] Criar
+- [x] Listar
+- [x] Excluir
 
-🏫 Reservas de Ambiente
- Criar reserva
+### 🔐 Autenticação e Permissões
 
- Listar reservas
+- [x] Login com JWT
+- [x] Permissões baseadas no tipo de usuário
+- [x] Professores: apenas visualização de suas disciplinas e reservas
 
- Deletar reserva
+---
 
-🔐 Autenticação e Autorização
- Login com JWT
+## 🗃️ Modelo de Dados
 
- Acesso restrito para professores (somente leitura)
+### 🔸 Professor
 
- Permissões de CRUD exclusivas para gestores
+- NI  
+- Nome  
+- E-mail  
+- Telefone  
+- Data de nascimento  
+- Data de contratação  
+- Disciplinas atribuídas (relacionamento)
 
-🧱 Modelo de Dados
-Professor
-NI
+### 🔸 Disciplina
 
-Nome
+- Nome  
+- Curso  
+- Carga horária  
+- Descrição  
+- Professor responsável (relacionamento)
 
-E-mail
+### 🔸 Reserva de Ambiente
 
-Telefone
+- Data início / término  
+- Período (Manhã, Tarde, Noite)  
+- Sala reservada  
+- Professor responsável (relacionamento)  
+- Disciplina associada (relacionamento)
 
-Data de nascimento
+---
 
-Data de contratação
+## 🚀 Etapas de Desenvolvimento
 
-Disciplinas atribuídas
+1. **Ambiente de Desenvolvimento**
+   - Configuração do Django, DRF e MySQL
 
-Disciplina
-Nome
+2. **Modelagem e API**
+   - Criação dos modelos e endpoints RESTful (CRUD)
 
-Curso
+3. **Autenticação**
+   - JWT para proteger rotas e dividir permissões
 
-Carga horária
+4. **Validações**
+   - Validação de dados e regras de negócio
 
-Descrição
+5. **Testes**
+   - Testes dos fluxos principais (CRUD e autenticação)
 
-Professor responsável
+6. **Documentação**
+   - Swagger ou Postman para documentação da API
 
-Reserva de Ambiente
-Data de início e término
+---
 
-Período (manhã/tarde/noite)
+## 📦 Instalação
 
-Sala reservada
-
-Professor responsável
-
-Disciplina associada
-
-🚀 Etapas do Projeto
-Configuração do Ambiente
-
-Instalação do Django e DRF
-
-Configuração do banco MySQL
-
-Modelagem e Endpoints
-
-Criação de modelos, serializers e views
-
-Implementação das regras de negócio e permissões
-
-Autenticação
-
-JWT e restrição por perfil de usuário
-
-Validações e Testes
-
-Verificação de fluxos e integridade dos dados
-
-Documentação
-
-Swagger ou Postman
-
-📎 Instalação
-bash
-Copiar
-Editar
+```bash
+# Clone o repositório
 git clone https://github.com/seu-usuario/seu-repo.git
 cd seu-repo
+
+# Crie e ative um ambiente virtual
 python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate no Windows
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+# Instale as dependências
 pip install -r requirements.txt
+
+# Configure o banco de dados MySQL no settings.py
+
+# Aplique as migrações
 python manage.py migrate
+
+# Rode o servidor
 python manage.py runserver
