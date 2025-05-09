@@ -36,7 +36,7 @@ class Account(AbstractUser):
     profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True, validators=[validate_image_size])
 
     def __str__(self):
-        return self.name
+        return f"{self.pk}"
     
 class Subject(models.Model):
     name = models.CharField(max_length=100, unique=True)

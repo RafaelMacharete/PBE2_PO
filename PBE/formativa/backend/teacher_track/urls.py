@@ -7,6 +7,8 @@ from .views import (
     SubjectRetrieveUpdateDestroyView,
     ClassroomListCreateView,
     ClassroomRetrieveUpdateDestroyView,
+    OwnerSubjectsListView,
+    OwnerClassroomListView
 )
 
 urlpatterns = [
@@ -24,4 +26,9 @@ urlpatterns = [
     # Classrooms URLs
     path('classrooms/', ClassroomListCreateView.as_view(), name='classroom-list-create'),
     path('classrooms/<int:pk>/', ClassroomRetrieveUpdateDestroyView.as_view(), name='classroom-retrieve-update-destroy'),
+
+    # Owner Data Urls
+    path('accounts/subject/', OwnerSubjectsListView.as_view(), name='owner_subjects-list'),    
+    path('accounts/classrooms/', OwnerClassroomListView.as_view(), name='owner-classroom-list')
+    
 ]
