@@ -113,8 +113,12 @@ WSGI_APPLICATION = 'schedule_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'schedule_management',
+        'USER': 'root',
+        'PASSWORD': 'senai',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
