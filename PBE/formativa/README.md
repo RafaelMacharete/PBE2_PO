@@ -4,19 +4,6 @@ Um sistema desenvolvido com **Django** e **Django REST Framework** que permite a
 
 ---
 
-## 📘 Sumário
-
-- [🧠 Contexto](#-contexto)
-- [🎯 Objetivo](#-objetivo)
-- [⚙️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [🛠️ Funcionalidades](#-funcionalidades)
-- [🗃️ Modelo de Dados](#-modelo-de-dados)
-- [🚀 Etapas de Desenvolvimento](#-etapas-de-desenvolvimento)
-- [📦 Instalação](#-instalação)
-- [📬 Contato](#-contato)
-
----
-
 ## 🧠 Contexto
 
 A administração educacional envolve a organização de professores, disciplinas e espaços físicos. Com o aumento da complexidade das operações escolares, torna-se essencial o uso de sistemas tecnológicos para otimizar a gestão e garantir um ambiente mais organizado, eficiente e transparente.
@@ -65,6 +52,7 @@ Criar um sistema para:
 
 - [x] Criar
 - [x] Listar
+- [x] Atualizar
 - [x] Excluir
 
 ### 🔐 Autenticação e Permissões
