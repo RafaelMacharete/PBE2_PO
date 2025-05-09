@@ -119,8 +119,8 @@ Criar um sistema para:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/RafaelMacharete/PBE2_PO.git
+cd PBE\formativa
 
 # Crie e ative um ambiente virtual
 python -m venv venv
