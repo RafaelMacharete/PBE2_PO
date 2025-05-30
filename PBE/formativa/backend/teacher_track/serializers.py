@@ -8,6 +8,7 @@ class LoginSerializer(TokenObtainPairSerializer):
         data['user'] = {
             'username': self.user.username,
         }
+        # After successful login, you can add more user details if needed
         return data
 
 class AccountSerializer(serializers.ModelSerializer):
@@ -17,7 +18,8 @@ class AccountSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True},
         }
-    
+        # Makes sure that the password is only writable and not readable
+
     def create(self, validated_data):
         user = Account.objects.create_user(
             username=validated_data['username'],
@@ -29,10 +31,15 @@ class AccountSerializer(serializers.ModelSerializer):
             phone=validated_data['phone'],
             name=validated_data['name'],
             is_staff=validated_data['is_staff']
-        )
+        ) # Create a new user with the given data
         return user
     
     def update(self, instance, validated_data):
+        '''
+        Update an existing user instance with the provided validated data.
+        This is used to save the password with the crypted hash
+        and update other fields as necessary.
+        '''
         
         password = validated_data.pop('password', None)
         for key, value in validated_data.items():

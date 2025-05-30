@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
 
 class MyValidator(UnicodeUsernameValidator):
+    # Now is also accepting SPACE
     regex = r'^[\w.@+\- ]+$'
 
 def validate_image_size(image):
@@ -13,9 +14,9 @@ def validate_image_size(image):
         raise ValidationError("Imagem size must be lower than 1MB.")
 
 class Account(AbstractUser):
-    REQUIRED_FIELDS = ['email', 'nif', 'phone', 'birth_date', 'hire_date', 'name']
+    REQUIRED_FIELDS = ['email', 'nif', 'phone', 'birth_date', 'hire_date', 'name'] # Fields that are required for creating a user
 
-    username_validator = MyValidator()
+    username_validator = MyValidator() # uses the new regex that allows space
     username = models.CharField(
         _('nif'),
         max_length=10,
@@ -33,7 +34,9 @@ class Account(AbstractUser):
     phone = models.CharField(max_length=15, unique=True)
     birth_date = models.DateField()
     hire_date = models.DateField()
-    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True, validators=[validate_image_size])
+    
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True, validators=[validate_image_size]) 
+    # Every user create, validate if the image size is greater than 1MB
 
     def __str__(self):
         return f"{self.pk}"
